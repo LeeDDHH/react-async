@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import AstronomyCard from './AstronomyCard';
 import { connect } from 'react-redux';
-import fetchData from '../../actions/fetch_data';
+import fetchData from '../../actions/fetchData';
 
 
 class AstronomyContainer extends Component {
