@@ -4,7 +4,7 @@ import { connect } from "react-redux";
 import fetchData from "../../actions/fetchData";
 
 class AstronomyContainer extends Component {
-  componentWillMount() {
+  componentDidMount() {
     this.props.fetchData();
     // console.log(this.props.astronomy);
   }
