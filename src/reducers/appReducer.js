@@ -1,14 +1,12 @@
 //これをもとにStoreを作ると、connect時にこちらの判定を通る。
 
-export default function(state = {}, action){
-    switch(action.type) {
+export default function(state = {}, action) {
+  switch (action.type) {
+    case "FETCH_DATA":
+      const newState = Object.assign({}, ...state, action.payload.data);
+      return newState;
 
-        case 'FETCH_DATA':
-            const newState = Object.assign({}, ...state, action.payload.data)
-            return newState;
-
-        default:
-            return state;
-    }
-
+    default:
+      return state;
+  }
 }

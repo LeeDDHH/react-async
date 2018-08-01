@@ -1,24 +1,23 @@
-import React from 'react';
+import React from "react";
 
-const AstronomyCard = (props) => {
+const AstronomyCard = props => {
+  const { title, url, hdurl, explanation, date, copyright } = props.data;
 
-    const { title, url, hdurl, explanation, date, copyright } = props.data;
+  return (
+    <div className="astronomy-card">
+      <h6 className="astronomy-title">{title}</h6>
 
-    return (
-        <div className="astronomy-card">
+      <a href={hdurl} className="astornomy-image-wrapper">
+        <img src={url} alt={title} />
+      </a>
 
-            <h6 className="astronomy-title">{title}</h6>
+      <p>{explanation}</p>
 
-            <a href={hdurl} className="astornomy-image-wrapper">
-                <img src={url} alt={title} />
-            </a>
-
-            <p>{explanation}</p>
-
-            <span>{date}, {copyright}</span>
-
-        </div>
-    )
-}
+      <span>
+        {date}, {copyright}
+      </span>
+    </div>
+  );
+};
 
 export default AstronomyCard;

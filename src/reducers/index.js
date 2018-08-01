@@ -1,10 +1,10 @@
 //いろんなreducerをまとめる際に使う
 
-import { combineReducers } from 'redux';
-import AppReducer from './appReducer';
+import { combineReducers } from "redux";
+import AppReducer from "./appReducer";
 
 const rootReducer = combineReducers({
-    astronomy: AppReducer
-})
+  astronomy: AppReducer
+});
 
 export default rootReducer;
